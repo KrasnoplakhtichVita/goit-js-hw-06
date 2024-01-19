@@ -1,24 +1,29 @@
-const ingredients = [
-  'Potatoes',
-  'Mushrooms',
-  'Garlic',
-  'Tomatos',
-  'Herbs',
-  'Condiments',
-];
+// class Storage {
+//   #items;
+//   constructor(items) {
+//     this.#items = items;
+//   }
 
-const ingredientsList = document.querySelector('#ingredients');
+//   getItems() {
+//     return this.#items;
+//   }
 
-const makeIngredientsListOptions = ingredients => {
-return ingredients.map(ingredient => { 
-const itemOfList = document.createElement("li");
-itemOfList.textContent = ingredient;
-itemOfList.classList.add("item");
+//   addItem(newItem) {
+//     this.#items.push(newItem);
+//   }
 
-return itemOfList;
-});
-};
+//   removeItem(itemToRemove) {
+//     if(this.#items.includes(itemToRemove)) {
+//       const itemsForSearch = this.#items.indexOf(itemToRemove);
+//       this.#items.splice(itemsForSearch, 1);
+//       return this.#items;
+//     }
+//   }
+// }
 
-const elements = makeIngredientsListOptions(ingredients);
-ingredientsList.append(...elements);
-console.log(ingredientsList);
+// const storage = new Storage(["Nanitoids", "Prolonger", "Antigravitator"]);
+// console.log(storage.getItems()); // ["Nanitoids", "Prolonger", "Antigravitator"]
+// storage.addItem("Droid");
+// console.log(storage.getItems()); // ["Nanitoids", "Prolonger", "Antigravitator", "Droid"]
+// storage.removeItem("Prolonger");
+// console.log(storage.getItems()); // ["Nanitoids", "Antigravitator", "Droid"]
